@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<!there are features that cannot be appreciated if output is not tested>
+<!Screenshot of the source code was taken using CodeSnap extension of VS Code>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Solinap, Charles Hendricks D.">
+        <title> SOLINAP'S FINAL PROJECT </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(https://plm.edu.ph/images/news/press-releases/Pamantasa--ng-Lungsod-ng-Maynila-facade.jpg);
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: 15px auto;
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        h2 {
+            text-align: center;
+            color: black;
+        }
+        .item {
+            flex: auto;
+            margin: 1%;
+        }
+        .item img {
+            width: fit-content;
+            height: fit-content;
+            display: block;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        fieldset {
+            border-radius: 5px;
+            padding: 10px;
+            border-color: rgb(0, 0, 0);
+            border: 1px solid;
+            margin-bottom: 15px;
+            margin-top: 5px;
+            width: 700px;
+            height: 100%;
+        }
+        legend {
+            padding: 0 10px;
+            font-weight: bold;
+            color: black;
+        }
+        input, select {
+            border: 1px solid;
+            border-radius: 15px;
+            border-color: rgb(0, 0, 0);
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        label {
+            margin-top: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .right-align {
+            float: right;
+        }
+        input[type="submit"] {
+            width: 40%;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        input[type="reset"] {
+            width: 40%;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: green;
+            color: white;
+        }
+        input[type="reset"]:hover {
+            background-color: red;
+            color: white;
+        }
+        .end {
+            width: 100%;
+            background-color: white;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            display: block;
+        }
+        .bord {
+            width: 100%;
+            background-color: gold;
+            height: 5px;
+        }
+        .last {
+            width: 100%;
+            background-color: white;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+        .last-content {
+            display: block;
+        }
+        .cut {
+            text-align: center;
+            width: 100%;
+            background-color: white;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4xG-LANyqPEfgcZZR3oraPfxM3EyMUhxntfEznIgh&s" alt="Pamantasan ng Lungsod ng Maynila">
+    </div>
+    <div class="container">
+        <h2> Student Registration Form </h2>
+        <form action="https://drive.google.com/drive/folders/1hEq21VCErwOAu5xtST9YphQvvHyAS-7t?usp=drive_link" method="post">
+            <fieldset>
+                <legend> Personal Information </legend>
+                <label for="gname"> Given Name </label>
+                <input type="text" id="gname" name="givenName" required style="width: 85%">
+            <br>
+                <label for="mname"> Middle Name </label>
+                <input type="text" id="mname" name="middleName" required style="width: 40%">
+
+                <label for="lname"> Last Name </label>
+                <input type="text" id="lname" name="lastName" requied style="width: 30%">
+            <br>
+
+                <label for="dob"> Date of Birth </label>
+                <input type="date" id="dob" name="dob" required style="font-family: Arial, sans-serif;">
+
+                <label for="gender" style="margin-left: 20px;"> Gender </label>
+                <select id="gender" name="gender" required style="width: 15%;">
+                    <option value=""> Select </option>
+                    <option value="male"> Male </option>
+                    <option value="female"> Female </option>
+                    <option value="other"> Other </option>
+                </select>
+
+                <label for="strand" style="margin-left: 20px;"> Strand </label>
+                <select id="strand" name="strand" required style="width: 15%;">
+                    <option value=""> Select </option>
+                    <option value="STEM"> STEM </option>
+                    <option value="ABM"> ABM </option>
+                    <option value="HUMSS"> HUMSS </option>
+                    <option value="other"> Other </option>
+                </select>
+
+            <p style="margin-bottom: 10px; font-weight: bold;"> Contact Information </p>
+                <label for="email"> Email </label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mobileNo" style="margin-left: 40px;"> Mobile Number </label>
+                <input type="tel" id="mobileNo" name="mobileNo" required>
+            <br>
+            <p style="margin-bottom: 10px; font-weight: bold;"> Permanent Home Address </p>
+                <label for="1location"> House No./ Street/ Village/ Subdivision/ Barangay </label>
+                <input type="text" id="1location" name="1location" required style="width: 100%;">
+
+                <label for="1region" > Region </label>
+                <select id="1region" name="1region" required>
+                    <option value=""> Select </option>
+                    <option value="Region 1"> Region 1 </option>
+                    <option value="Region 2"> Region 2 </option>
+                </select>
+
+                <label for="1city" style="margin-left: 40px;"> City </label>
+                <select id="1city" name="1city" required>
+                    <option value=""> Select </option>
+                    <option value="San Mateo"> San Mateo </option>
+                    <option value="Taguig"> Taguig </option>
+                </select>
+
+                <label for="zip" style="margin-left: 40px;"> Zip Code </label>
+                <input type="text" id="zip" name="zip" required>
+
+                <p> Is your Permanent Address the same with your Current Address? </p>
+                <input type="radio" id="yes" name="address-same" value="yes">
+                <label for="yes"> Yes </label>
+
+                <input type="radio" id="no" name="address-same" value="no">
+                <label for="no"> No </label>
+
+            </fieldset>
+            <fieldset>
+                <legend> Current Address </legend>
+                <label for="caddress"> Current Address </label>
+                <input type="text" id="caddress" name="caddress" required style="width: 80%;">
+            </fieldset>
+            <fieldset>
+                <legend> Course Information </legend>
+                <a href="https://plm.edu.ph/admissions/undergraduate-programs" class="right-align" target="_blank"> See List of Programs </a>
+            <br>
+                <label for="1program"> 1st Degree Program </label> <br>
+                <select id="1program" name="1program" required style="width: 100%;">
+                    <option value=""> Select a Degree Program </option>
+                    <option value="bsece"> BS in Electronics Engineering </option>
+                    <option value="bsce"> BS in Civil Engineering </option>
+                </select>
+            <br> 
+                <label for="2program"> 2nd Degree Program </label> <br>
+                <select id="2program" name="2program" required style="width: 100%;">
+                    <option value=""> Select a Degree Program </option>
+                    <option value="bsece"> BS in Electronics Engineering </option>
+                    <option value="bsce"> BS in Civil Engineering </option>
+                </select>
+            <br>
+            <label for="3program"> 3rd Degree Program </label> <br>
+            <select id="3program" name="3program" required style="width: 100%;">
+                <option value=""> Select a Degree Program </option>
+                <option value="bsece"> BS in Electronics Engineering </option>
+                <option value="bsce"> BS in Civil Engineering </option>
+            </select>
+            </fieldset>
+            <fieldset>
+                <legend> Additional Information </legend>
+                <p> Father's Information </p>
+                <label for="faname"> Name: </label>
+                <input type="text" id="faname" name="father-name" required style="width: 50%;">
+                <label for="facontact"> Contact Number:</label>
+                <input type="tel1" id="facontact" name="fatherContact" required style="width: 20%;">
+        <br>
+            <p> Mother's Information </p>
+            <label for="moname"> Name: </label>
+            <input type="text" id="moname" name="mother-name" required style="width: 50%;">
+            <label for="mocontact"> Contact Number:</label>
+            <input type="tel1" id="mocontact" name="motherContact" required style="width: 20%;">
+        <br>
+            <p> Guardian's Information </p>
+            <label for="guname"> Name: </label>
+            <input type="text" id="guname" name="guardian-name" required style="width: 50%;">
+            <label for="gucontact"> Contact Number:</label>
+            <input type="tel1" id="gucontact" name="guardianContact" required style="width: 20%;">
+            </fieldset>
+            <fieldset>
+                <legend> Reminders </legend>
+                <p style="color:rgb(175, 0, 0)"> Please wait for our email regarding your On-site Examination Schedule. </p>
+                <p> Prepare the following requirements: </p>
+                <ol> 
+                    <li> Admission Test Permit with latest 2x2 picture </li>
+                    <li> Hardcopy of Student's Registration Form</li>
+                    <li> Long Brown Envelope with full name </li>
+                    <li> School ID </li>
+                </ol>
+                <p style="color:rgb(175, 0, 0)"> Reminders:</p>
+                <ul> 
+                    <li> Non-compliance with the requirements will result in forfeiture of the application. </li>
+                    <li> Arrive on time and observe punctuality according to your examination schedule.</li>
+                </ul>
+            </fieldset>
+        <div class="button-group">
+            <fieldset>
+            <p style="color: rgb(175, 0, 0);"> Any false information will result in forfeiture of the application. </p>
+            <input type="checkbox" id="certify" required> 
+            <label for="certify"> I hereby certify that all the information above is true. </label>
+        <br>
+            <input type="submit" value="Submit" style="margin-left: 40px;">
+            <input type="reset" value="Reset" style="margin-left: 20px;">
+            </fieldset>
+        </div>
+        </form>
+    </div>
+    <div class="bord"></div>
+    <div class="end">
+        <img src="https://www.plm.edu.ph/images/ui/plm-logo--with-header.png" alt="Pamantasan ng Lungsod ng Maynila" 
+        style="width: auto;height: 80px;">
+    </div> 
+    <div class="last">
+        <div class="last-content">
+        <p style="font-weight: bold; margin-left: 100px;margin-top: 1px;"> Get in Touch <br> </p>
+        <p style="margin-left: 100px;"> Gen. Luna corner Muralla St., Intramuros <br>
+            Manila, Philippines 1002 </p>
+        </div>
+        <div class="last-content" style="margin-left: 300px;">
+            <p> For More Information: </p>
+            Visit our Official Website. <a href="https://www.plm.edu.ph" target="_blank" style="color: black; text-decoration: none;"> Click Here </a> <br>
+        </div>
+    </div>
+    <div class="cut"> 
+        © 1967 - 2024 Pamantasan ng Lungsod ng Maynila. All Rights Reserved.
+    </div>
+</body>
+</html>
